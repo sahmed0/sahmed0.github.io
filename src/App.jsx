@@ -7,18 +7,29 @@ function App() {
   return (
     <div className="main-content-wrapper">
       
-      {/* SIDEBAR */}
-      <nav className="custom-sidebar">
-        <a href="#home">HOME</a>
+      {/* FLOATING ISLAND NAVIGATION */}
+      <nav className="floating-nav">
+        <a href="#home">Home</a>
         {projectData.map((project, index) => (
           <a key={project.id} href={`#${project.id}`}>
-            0{index + 1}. {project.title.toUpperCase()}
+            {project.title}
           </a>
         ))}
       </nav>
 
       {/* HERO SECTION */}
-      <div id="home" className="portfolio-section hero-bg">
+      {/* 1. We removed the 'hero-bg' class because we don't need the CSS image anymore */}
+      <div id="home" className="portfolio-section hero-container">
+        
+        {/* 2. The Video Element */}
+        <video autoPlay loop muted playsInline className="hero-video">
+          <source src="/hero-loop.mp4" type="video/mp4" />
+        </video>
+
+        {/* 3. An Overlay to ensure text stays readable (optional but recommended) */}
+        <div className="hero-overlay"></div>
+
+        {/* 4. Your existing content */}
         <div className="hero-content">
           <h1>{personalData.name}</h1>
           <p className="role">{personalData.role}</p>
@@ -28,19 +39,47 @@ function App() {
       </div>
 
       {/* PROJECTS LOOP */}
-      {/* This automatically creates a card for every project in your data file */}
       {projectData.map((project, index) => (
         <ProjectCard key={project.id} project={project} index={index} />
       ))}
 
       {/* FOOTER */}
-      <div className="portfolio-section footer-bg">
-        <h2>{personalData.name}</h2>
-        <div className="social-links">
-          <a href={personalData.social.github}>GitHub</a>
-          <a href={personalData.social.linkedin}>LinkedIn</a>
+      <footer className="footer-container">
+        <div className="footer-content">
+          
+          {/* Left Column: Personal Info */}
+          <div className="footer-info">
+            <h3>{personalData.name}</h3>
+            <p className="footer-role">{personalData.role}</p>
+            <p className="footer-email">
+               {/* Optional: Add email if you want, or just location */}
+               Manchester, United Kingdom
+            </p>
+          </div>
+
+          {/* Right Column: Social Icons */}
+          <div className="footer-socials">
+            <a href={personalData.social.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href={personalData.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
-      </div>
+
+        {/* Bottom Row: Legal Text */}
+        <div className="footer-legal">
+          <p>
+            &copy; {new Date().getFullYear()} {personalData.name}. All Rights Reserved.
+          </p>
+          <p className="legal-links">
+            {/* These are dummy links for the "Pro" look */}
+            <span>Privacy Policy</span>
+            <span>Terms of Service</span>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

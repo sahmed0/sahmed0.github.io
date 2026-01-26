@@ -1,39 +1,39 @@
 export const personalData = {
-  name: "John Doe",
-  role: "PHYSICS GRADUATE | SOFTWARE ENGINEER | QUANT",
-  bio: "Building high-performance systems at the intersection of Finance and Physics.",
+  name: "Sajid Ahmed",
+  role: "MPhys",
+  bio: "I recently graduated from The University of Manchester with an Integrated Master's in Physics, and over the years my curiosity has lead me to work on many fascinating projects. This website showcases a few of my favourites.",
   social: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe"
+    github: "https://github.com/sahmed0",
+    linkedin: "https://linkedin.com/in/s-ahmed1"
   }
 };
 
 export const projectData = [
   {
     id: "project-1",
-    title: "AI Trading Bot",
-    subtitle: "Algorithmic Trading System",
-    tags: ["Python", "Pandas", "ML"],
-    description: "A high-frequency trading algorithm designed to predict natural gas futures. Backtested with a Sharpe Ratio of 2.1.",
-    link: "https://github.com/johndoe/repo1",
-    image: "https://placehold.co/600x400/0b0c10/66fcf1"
+    title: "Quant Research",
+    subtitle: "Machine Learning for Trading & Credit Risk",
+    tags: ["Python", "scikit-learn", "Machine Learning"],
+    description: "As part of the JP Morgan Quantitative Research Virtual Program, I wrote Python machine-learning software designed to predict the price of natural gas futures and aid in developing a trading algorithm. Furthermore, I trained a machine learning model on the FICO scores of 10,000 customers to create an accurate predictive tool for loan defaults.",
+    link: "https://github.com/sahmed0/JPMorgan_Quantitative_Research_Program",
+    image: "https://projectnile.in/wp-content/uploads/2022/01/Algorithmic-Trading.jpeg"
   },
   {
     id: "project-2",
-    title: "Fluid Dynamics Sim",
-    subtitle: "NMR Spectrometer Analysis",
-    tags: ["C++", "OpenCV", "Physics"],
-    description: "Computer vision software developed to measure flow speeds of lubricated spheres in elastic tubes.",
-    link: "https://github.com/johndoe/repo2",
-    image: "https://placehold.co/600x400/0b0c10/66fcf1"
+    title: "Future Sea Level Prediction",
+    subtitle: "Using AI to predict future sea level rises",
+    tags: ["Python", "Machine Learning", "Climate Change"],
+    description: "An interactive web application that forecasts global sea level rise by comparing three distinct statistical models: Facebook Prophet, Linear Regression, and Polynomial Regression.",
+    link: "https://github.com/sahmed0/sea-level-app",
+    image: "https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L3BkbWlzYzNiYXRjaDItd2syNjQ2MjEwLWltYWdlXzEuanBn.jpg"
   },
   {
     id: "project-3",
-    title: "Web Engine",
-    subtitle: "Warehouse Inventory System",
-    tags: ["SQL", "React", "JS"],
-    description: "A full-stack inventory management system handling 12,000+ items for a startup.",
-    link: "https://github.com/johndoe/repo3",
-    image: "https://placehold.co/600x400/0b0c10/66fcf1"
+    title: "Heart Health AI",
+    subtitle: "Using AI to estimate the risk of heart disease",
+    tags: ["Flask", "Python", "Gradient Boosting", "Full-Stack"],
+    description: "Heart Health is a full-stack web application that leverages machine learning to predict cardiovascular disease risk. Trained on over 70,000 anonymised clinical records, the system uses a Gradient Boosting Classifier to detect non-linear correlations between biometric factors (age, systolic BP, cholesterol) and cardiac health.",
+    link: "https://github.com/sahmed0/heart-health-backend",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Diagram_of_the_human_heart_%28no_labels%29.svg"
   }
 ];
