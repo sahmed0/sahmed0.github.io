@@ -294,40 +294,104 @@ body {
   transform: translateY(-3px);
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+/* --- ADJUSTMENTS FOR MOBILE PHONES --- */
 @media (max-width: 900px) {
-  /* On mobile, we stack the hero content because corners are too cramped */
+  /* Note: 900px on mobile displays is the Logical Width not the hardware pixels */
+  /* 1. HERO SECTION: Disable "Four Corners" layout and stack vertically */
   .hero-content {
-    display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; 
-    text-align: center; padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px;
+    height: 100vh; /* Ensure it still fills the screen */
   }
 
-@media (max-width: 900px) {  
+  /* Reset position for Name */
+  .hero-content h1 { 
+    position: relative; 
+    top: auto; left: auto; 
+    font-size: 3rem; 
+    max-width: 100%; 
+    margin-bottom: 15px;
+  }
+
+  /* Reset position for Socials */
   .hero-socials {
-    position: relative; /* Stop floating */
+    position: relative; 
     top: auto; right: auto;
-    margin-bottom: 30px; /* Add space between socials and title/role */
+    margin-bottom: 25px; 
     justify-content: center;
   }
-}
 
-@media (max-width: 900px) {
+  /* Reset position for Role */
+  .hero-content .role { 
+    position: relative; 
+    bottom: auto; left: auto; 
+    margin-bottom: 20px;
+  }
+
+  /* Reset position for Bio */
+  .hero-content .bio { 
+    position: relative; 
+    bottom: auto; right: auto; 
+    text-align: center; 
+    max-width: 100%; 
+  }
+
+  /* 2. FLOATING NAVIGATION: Fix overflow and centering */
+  .floating-nav {
+    /* Sizing & Positioning */
+    width: auto;             /* Shrink to fit content */
+    max-width: 90%;          /* Cap width at 90% of screen */
+    min-width: 280px;        /* Don't get too small */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Layout */
+    padding: 8px 12px;
+    gap: 5px;
+    justify-content: center;
+    
+    /* Safety for small screens */
+    white-space: nowrap;     /* Force single line */
+    overflow-x: auto;        /* Scroll sideways if needed */
+    z-index: 99999;
+  }
+
+  .floating-nav a {
+    font-size: 0.75rem; 
+    padding: 6px 10px;
+  }
+  
+  /* Hide "Home" button on mobile to save space */
+  .floating-nav a[href="#home"] { 
+    display: none; 
+  }
+
+  /* 3. PROJECT CARDS: Stack Image on top of Text */
+  .project-card { 
+    flex-direction: column; 
+    min-height: auto; 
+  }
+  
+  .project-image { 
+    min-height: 250px; 
+    flex: none; /* Stop flex resizing */
+    height: 250px; /* Force height */
+  }
+  
+  .project-details { 
+    padding: 30px 20px; 
+  }
+
+  /* 4. FOOTER: Stack columns */
   .footer-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 30px;
   }
-
-
-  .hero-content h1 { position: relative; top: auto; left: auto; font-size: 3.5rem; max-width: 100%; text-align: center; margin-bottom: 20px;}
-  .hero-content .role { position: relative; bottom: auto; left: auto; margin-bottom: 20px;}
-  .hero-content .bio { position: relative; bottom: auto; right: auto; text-align: center; max-width: 100%; }
-
-  .project-card { flex-direction: column; min-height: auto; }
-  .project-image { min-height: 300px; }
-  .project-details { padding: 40px 30px; }
-  
-  .floating-nav { width: 90%; justify-content: space-around; }
 }

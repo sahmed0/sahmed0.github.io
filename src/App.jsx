@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css'; // This connects your CSS styling
-import { personalData, projectData } from './data'; // Import your content
-import ProjectCard from './components/ProjectCard'; // Import your LEGO block
+import './App.css'; // This connects the CSS styling
+import { personalData, projectData } from './data'; // Import the content
+import ProjectCard from './components/ProjectCard'; // Import the LEGO block
 
 function App() {
   return (
@@ -22,7 +22,9 @@ function App() {
       <div id="home" className="portfolio-section hero-container">
         
         {/* 2. The Video Element */}
-        <video autoPlay loop muted playsInline className="hero-video">
+        <video autoPlay loop muted playsInline
+        poster="/hero-bg.jpg"
+        className="hero-video">
           <source src="/hero-loop.mp4" type="video/mp4" />
         </video>
 
