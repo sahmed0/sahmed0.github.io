@@ -117,6 +117,29 @@ body {
   max-width: 50%; text-align: left;
 }
 
+/* 4. Socials Top-Right */
+.hero-socials {
+  position: absolute;
+  top: 60px; right: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.hero-socials a {
+  font-size: 2rem; /* Large, bold icons */
+  color: var(--text-main);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+}
+
+.hero-socials a:hover {
+  /* Apply the Jeton Gradient to the text/icon itself */
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  transform: scale(1.2) rotate(5deg); /* Slight pop and tilt */
+}
+
 /* 2. Role Top-Left */
 .hero-content .role { 
   position: absolute;
@@ -217,14 +240,14 @@ body {
   box-shadow: 0 15px 30px rgba(255, 82, 119, 0.5); 
 }
 
-/* --- FOOTER (Professional Layout) --- */
+/* --- FOOTER --- */
 .footer-container {
-  background-color: var(--bg-card); /* Matches your cards (soft grey) */
+  background-color: #ff7b00;
   color: var(--text-main);
   border-top: 1px solid rgba(0,0,0,0.05);
   
   /* CRITICAL: Extra padding at bottom so nav doesn't hide text */
-  padding: 10px 20px 90px 20px; 
+  padding: 10px 10px 10px 10px; 
 }
 
 .footer-content {
@@ -237,23 +260,11 @@ body {
 }
 
 /* Left Info Column */
-.footer-info h3 {
-  font-size: 1.8rem;
-  font-weight: 800;
+.footer-info {
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 10px;
   letter-spacing: -1px;
-}
-
-.footer-role {
-  color: var(--text-muted);
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.footer-email {
-  color: var(--text-body);
-  font-size: 1rem;
 }
 
 /* Right Social Icons */
@@ -283,50 +294,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Legal Bottom Row */
-.footer-legal {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  color: var(--text-muted);
-}
-
-.legal-links span {
-  margin-left: 20px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.legal-links span:hover {
-  color: var(--text-main);
-  text-decoration: underline;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-  }
-  
-  .footer-legal {
-    flex-direction: column-reverse;
-    gap: 15px;
-    text-align: center;
-  }
-  
-  .legal-links span {
-    margin: 0 10px;
-  }
-}
-
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 900px) {
   /* On mobile, we stack the hero content because corners are too cramped */
@@ -335,7 +302,25 @@ body {
     justify-content: center; align-items: center; 
     text-align: center; padding: 20px;
   }
-  
+
+@media (max-width: 900px) {  
+  .hero-socials {
+    position: relative; /* Stop floating */
+    top: auto; right: auto;
+    margin-bottom: 30px; /* Add space between socials and title/role */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+
   .hero-content h1 { position: relative; top: auto; left: auto; font-size: 3.5rem; max-width: 100%; text-align: center; margin-bottom: 20px;}
   .hero-content .role { position: relative; bottom: auto; left: auto; margin-bottom: 20px;}
   .hero-content .bio { position: relative; bottom: auto; right: auto; text-align: center; max-width: 100%; }
