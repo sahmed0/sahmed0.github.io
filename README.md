@@ -57,6 +57,7 @@ If you want to view the source code or run this project on your machine:
 ├── App.css      # Global styles, variables, and responsive media queries
 ├── data.js      # Centralised content management (Text/Links)
 └── main.jsx     # React entry point
+```
 
 🚀 Deployment
 This project is deployed to GitHub Pages.
