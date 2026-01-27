@@ -6,7 +6,7 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div id={project.id} className={`portfolio-section ${isEven ? 'bg-light' : 'bg-white'}`}>
-      <h2 className="section-title">0{index + 1} // {project.title.toUpperCase()}</h2>
+      <h2 className="section-title">{project.title.toUpperCase()}</h2>
       
       {/* If index is odd (1, 3...), add 'flex-row-reverse' to flip the layout */}
       <div className={`project-card ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`}>

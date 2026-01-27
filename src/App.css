@@ -111,7 +111,7 @@ body {
   position: absolute;
   top: 60px; left: 60px;
   
-  font-size: 6rem; font-weight: 900; 
+  font-size: 6rem; font-weight: 750; 
   letter-spacing: -3px; line-height: 1;
   color: var(--text-main);
   max-width: 50%; text-align: left;
@@ -242,7 +242,7 @@ body {
 
 /* --- FOOTER --- */
 .footer-container {
-  background-color: #ff7b00;
+  background-color: var(--bg-body);
   color: var(--text-main);
   border-top: 1px solid rgba(0,0,0,0.05);
   
@@ -312,9 +312,11 @@ body {
   .hero-content h1 { 
     position: relative; 
     top: auto; left: auto; 
-    font-size: 3rem; 
+    font-size: 3.5rem; 
     max-width: 100%; 
     margin-bottom: 15px;
+    color: #fff;
+    margin-top: -50px;
   }
 
   /* Reset position for Socials */
@@ -330,6 +332,7 @@ body {
     position: relative; 
     bottom: auto; left: auto; 
     margin-bottom: 20px;
+    color: transparent;
   }
 
   /* Reset position for Bio */
@@ -338,6 +341,7 @@ body {
     bottom: auto; right: auto; 
     text-align: center; 
     max-width: 100%; 
+    color: #fff;
   }
 
   /* 2. FLOATING NAVIGATION: Fix overflow and centering */
@@ -389,9 +393,10 @@ body {
 
   /* 4. FOOTER: Stack columns */
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction:row;
+    align-items: left;
+    text-align: left;
     gap: 30px;
+    padding: 0px 0px 45px 0px;
   }
 }

@@ -23,7 +23,7 @@ function App() {
         
         {/* 2. The Video Element */}
         <video autoPlay loop muted playsInline
-        poster="/hero-bg.jpg"
+        poster="/hero-bg.webp"
         className="hero-video">
           <source src="/hero-loop.mp4" type="video/mp4" />
         </video>

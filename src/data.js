@@ -20,7 +20,7 @@ export const projectData = [
   },
   {
     id: "project-2",
-    title: "Future Sea Level Prediction",
+    title: "Sea Level Forecast",
     subtitle: "Using AI to predict future sea level rises",
     tags: ["Python", "Machine Learning", "Climate Change"],
     description: "An interactive web application that forecasts global sea level rise by comparing three distinct statistical models: Facebook Prophet, Linear Regression, and Polynomial Regression.",
