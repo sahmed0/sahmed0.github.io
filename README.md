@@ -2,7 +2,7 @@
 
 > A high-performance, responsive portfolio website built with React and Vite, featuring a "Fintech-inspired" aesthetic, dynamic video backgrounds, and glassmorphism UI elements.
 
-![Project Preview](public/hero-bg.webp)
+![Project Preview](https://github.com/sahmed0/sahmed0.github.io/blob/main/public/screenshot.jpeg?raw=true)
 ## 🔗 Live Demo
 **[View Live Website](https://sahmed0.github.io)**
 
