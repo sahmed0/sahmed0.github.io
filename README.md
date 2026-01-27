@@ -1,8 +1,9 @@
-# 🚀 Modern React Portfolio
+# My Portfolio Website
 
-> A high-performance, responsive portfolio website built with React and Vite, featuring a "Fintech-inspired" aesthetic, dynamic video backgrounds, and glassmorphism UI elements.
+A high-performance, responsive portfolio website built with React and Vite, featuring a "Fintech-inspired" aesthetic, dynamic video backgrounds, and glassmorphism UI elements.
 
-![Project Preview](screenshot.jpeg)
+![Project Preview](public/screenshot.jpeg)
+
 ## 🔗 Live Demo
 **[View Live Website](https://sahmed0.github.io)**
 
@@ -33,7 +34,7 @@ If you want to view the source code or run this project on your machine:
 1.  **Clone the repository**
     ```bash
     git clone https://github.com/sahmed0/sahmed0.github.io.git
-    cd johndoe.github.io
+    cd sahmed0.github.io
     ```
 
 2.  **Install Dependencies**
@@ -58,3 +59,20 @@ If you want to view the source code or run this project on your machine:
 ├── data.js      # Centralised content management (Text/Links)
 └── main.jsx     # React entry point
 ```
+
+## 🚀 Deployment
+This project is deployed to GitHub Pages.
+
+Build Command:
+
+```bash
+npm run build
+```
+(Generates a production-ready dist folder)
+
+Deploy Command:
+
+```bash
+npm run deploy
+```
+(Pushes the build artefacts to the gh-pages branch)
