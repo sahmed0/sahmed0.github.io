@@ -27,27 +27,6 @@ A high-performance, responsive portfolio website built with React and Vite, feat
 * **Deployment:** GitHub Pages (Manual & CI/CD workflows)
 * **Version Control:** Git, GitHub
 
-## ⚡ How to Run Locally
-
-If you want to view the source code or run this project on your machine:
-
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/sahmed0/sahmed0.github.io.git
-    cd sahmed0.github.io
-    ```
-
-2.  **Install Dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Start Local Server**
-    ```bash
-    npm run dev
-    ```
-    *Open `http://localhost:5173` in your browser.*
-
 ## 📂 Project Structure
 
 ```text
@@ -60,19 +39,11 @@ If you want to view the source code or run this project on your machine:
 └── main.jsx     # React entry point
 ```
 
-## 🚀 Deployment
-This project is deployed to GitHub Pages.
+---
+## 📄 License
+Copyright © 2026 Sajid Ahmed. All Rights Reserved.
 
-Build Command:
-
-```bash
-npm run build
-```
-(Generates a production-ready dist folder)
-
-Deploy Command:
-
-```bash
-npm run deploy
-```
-(Pushes the build artefacts to the gh-pages branch)
+This repository is intended solely for portfolio review and recruitment purposes. By accessing this repository, you acknowledge the following terms:
+- View Only: Permission is granted to view the source code for the purpose of evaluating my professional skills and experience.
+- No Unauthorised Use: No permission is granted to copy, modify, distribute, or use this code for any personal, commercial, or educational project.
+- No AI Training: Use of this source code for the purpose of training machine learning models or generative AI is strictly prohibited.
